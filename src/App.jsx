@@ -12,36 +12,46 @@ import Skills from "./components/skills";
 import Contact from "./components/contact";
 import { motion } from "framer-motion";
 
+
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
 
+  const handleHomeClick = () => {
+    if (isSidebarOpen) {
+      toggleSidebar();
+    }
+  };
 
   return (
     <>
-      <div id="app" className=" w-screen ">
+      <div id="app" className="w-screen">
         <motion.div
           initial={{ x: -300, scale: 0 }}
           animate={{ x: 0, scale: 1 }}
           transition={{ duration: 1 }}
-          className={` h-screen z-10 fixed ${isSidebarOpen ? "w-auto" : "hidden"
+          className={`h-screen z-10 fixed ${isSidebarOpen ? "w-auto" : "hidden"
             } min-w-fit transition-all duration-300`}
         >
-          <Main isSidebaropen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+          <Main isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         </motion.div>
 
-        <div className=" h-screen w-full">
+        <div className="h-screen w-full">
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route
+              exact
+              path="/"
+              element={<Home handleHomeClick={handleHomeClick} />}
+            />
             <Route path="/profile" element={<Profile />} />
             <Route path="/project" element={<Project />} />
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-
         </div>
 
         <div className="fixed top-4 left-4 rounded-full z-30 bg-white">
@@ -49,9 +59,7 @@ function App() {
             name="check-icon"
             id="check-icon"
             className="text-black p-2 focus:outline-none"
-            onClick={() => {
-              toggleSidebar();
-            }}
+            onClick={toggleSidebar}
           >
             {isSidebarOpen ? (
               <>
@@ -67,8 +75,5 @@ function App() {
       </div>
     </>
   );
-
-
 }
-
 export default App;

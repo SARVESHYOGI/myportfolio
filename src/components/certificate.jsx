@@ -1,4 +1,3 @@
-import React from "react";
 import htmlcss from "../photo/htmlcss.jpeg";
 import nextcomp from "../photo/nextcomp.jpeg";
 import techminiachive from "../photo/techminiachive.jpeg";

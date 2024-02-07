@@ -1,4 +1,3 @@
-import React from "react";
 import "./components.css";
 import c from "../photo/c.png";
 import cpp from "../photo/c++.png";

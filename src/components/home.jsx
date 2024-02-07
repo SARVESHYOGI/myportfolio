@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./components.css";
 import { motion } from "framer-motion";
 import SplashScreen from "../page/SplashScreen";
@@ -28,6 +28,8 @@ function Home() {
             <div className=" flex flex-col content-center items-center align-middle justify-center">
 
 
+
+
                 <motion.div
                     initial={{ y: 1000, scale: 0 }}
                     transition={{ duration: 0.5, delay: 3 }}
@@ -36,8 +38,6 @@ function Home() {
                 >
                     <span>HI, <span id="colors" className=""> SARVESH YOGI</span>   HERE</span>
                 </motion.div>
-
-
 
 
                 <motion.div
@@ -55,7 +55,6 @@ function Home() {
                             repeatType: 'mirror',
                         }} className="mb-10 text-5xl md:text-8xl text-center">
                         <button
-                            // className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-blue-500 group-hover:from-purple-500 group-hover:to-blue-800 hover:text-white dark:text-white "
                             className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 text-sm font-medium  rounded-lg group bgg text-white hover:text-yellow-300  "
                         >
                             <span
