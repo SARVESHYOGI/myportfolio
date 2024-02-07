@@ -11,20 +11,37 @@
 //     </div>
 //   </React.StrictMode>,
 // )
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import "./index.css";
+// import App from "./App";
+// import { BrowserRouter } from "react-router-dom";
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <div className=" w-full">
+//         <App />
+//       </div>
+
+//     </BrowserRouter>
+//   </React.StrictMode>
+// );
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom"; // Import HashRouter instead of BrowserRouter
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <div className=" w-full">
+    <HashRouter>
+      <div className="w-full">
         <App />
       </div>
-
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
+

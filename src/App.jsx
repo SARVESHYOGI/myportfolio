@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import "./App.css";
@@ -33,17 +33,14 @@ function App() {
         </motion.div>
 
         <div className=" h-screen w-full">
-          {/* <BrowserRouter> */}
-
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/project" element={<Project />} />
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          {/* </BrowserRouter> */}
 
         </div>
 
