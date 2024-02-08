@@ -36,7 +36,7 @@ function Main({ isSidebarOpen, toggleSidebar }) {
                         </div>
                     </motion.div>
                 </Link>
-                <Link to="https://drive.google.com/file/d/1RUKVGeoQrl6YrG34dhuGZfTS3MF52p7Z/view?usp=sharing">
+                <Link to="https://drive.google.com/file/d/1U_qqLGco89A8cID1-W79PJWCUHppzvJr/view">
                     <motion.div
                         whileHover={{ scale: 0.95 }}
                         whileTap={{ scale: 1.1 }}
@@ -45,7 +45,7 @@ function Main({ isSidebarOpen, toggleSidebar }) {
                             className="-mx-1"
                             rel="noreferrer"
                             target="_blank"
-                            to="https://drive.google.com/file/d/1RUKVGeoQrl6YrG34dhuGZfTS3MF52p7Z/view?usp=sharing"
+                            to="https://drive.google.com/file/d/1U_qqLGco89A8cID1-W79PJWCUHppzvJr/view"
                         >
                             <div className="bg-[#030223] hover:bg-transparent py-2 flex items-center justify-center text-white border border-white shadow-lg border-b-4 font-bold overflow-hidden relative px-4 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group align-middle bg-center w-full">
 
