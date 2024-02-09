@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import "./App.css";
@@ -11,10 +11,21 @@ import Home from "./components/home";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
 import { motion } from "framer-motion";
+import SplashScreen from "./page/SplashScreen";
 
 
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+  useEffect(() => {
+    // Simulate loading time
+    const splashTimeout = setTimeout(() => {
+      setShowSplash(false);
+    }, 3000); // Adjust the time as needed
+
+    // Clear the timeout on component unmount
+    return () => clearTimeout(splashTimeout);
+  }, []);
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -28,51 +39,57 @@ function App() {
 
   return (
     <>
-      <div id="app" className="w-screen">
-        <motion.div
-          initial={{ x: -300, scale: 0 }}
-          animate={{ x: 0, scale: 1 }}
-          transition={{ duration: 1 }}
-          className={`h-screen z-10 fixed ${isSidebarOpen ? "w-auto" : "hidden"
-            } min-w-fit transition-all duration-300`}
-        >
-          <Main isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-        </motion.div>
+      {showSplash ?
+        (<SplashScreen />) : (
 
-        <div className="h-screen w-full">
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={<Home handleHomeClick={handleHomeClick} />}
-            />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/project" element={<Project />} />
-            <Route path="/certificate" element={<Certificate />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+          <div id="app" className="w-screen">
+            <motion.div
+              initial={{ x: -300, scale: 0 }}
+              animate={{ x: 0, scale: 1 }}
+              transition={{ duration: 1 }}
+              className={`h-screen z-10 fixed ${isSidebarOpen ? "w-auto" : "hidden"
+                } min-w-fit transition-all duration-300`}
+            >
+              <Main isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            </motion.div>
 
-        <div className="fixed top-4 left-4 rounded-full z-30 bg-white">
-          <button
-            name="check-icon"
-            id="check-icon"
-            className="text-black p-2 focus:outline-none"
-            onClick={toggleSidebar}
-          >
-            {isSidebarOpen ? (
-              <>
-                <IoMdClose className="text-3xl font-bold md:text-5xl" />
-              </>
-            ) : (
-              <>
-                <CiMenuBurger className="text-3xl md:text-5xl font-bold" />
-              </>
-            )}
-          </button>
-        </div>
-      </div>
+            <div className="h-screen w-full">
+              <Routes>
+                <Route
+                  exact
+                  path="/"
+                  element={<Home handleHomeClick={handleHomeClick} />}
+                />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/project" element={<Project />} />
+                <Route path="/certificate" element={<Certificate />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </div>
+
+            <div className="fixed top-4 left-4 rounded-full z-30 bg-white">
+              <button
+                name="check-icon"
+                id="check-icon"
+                className="text-black p-2 focus:outline-none"
+                onClick={toggleSidebar}
+              >
+                {isSidebarOpen ? (
+                  <>
+                    <IoMdClose className="text-3xl font-bold md:text-5xl" />
+                  </>
+                ) : (
+                  <>
+                    <CiMenuBurger className="text-3xl md:text-5xl font-bold" />
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        )
+      }
+
     </>
   );
 }

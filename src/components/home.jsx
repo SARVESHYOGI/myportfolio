@@ -1,30 +1,17 @@
-import { useState, useEffect } from "react";
 import "./components.css";
 import { motion } from "framer-motion";
-import SplashScreen from "../page/SplashScreen";
 import { Link } from "react-router-dom";
 
 
 function Home() {
 
-    const [showSplashScreen, setShowSplashScreen] = useState(true);
 
-    useEffect(() => {
-
-        setTimeout(() => {
-            setShowSplashScreen(false);
-        }, 3000);
-    }, []);
 
 
     return (<>
-        {showSplashScreen && <SplashScreen />}
 
         <motion.div
-
             className="overflow-y-hidden w-screen h-screen overflow-x-hidden text-white flex justify-center content-center">
-
-
             <div className=" flex flex-col content-center items-center align-middle justify-center">
 
 
@@ -32,7 +19,7 @@ function Home() {
 
                 <motion.div
                     initial={{ y: 1000, scale: 0 }}
-                    transition={{ duration: 0.5, delay: 3 }}
+                    transition={{ duration: 0.5, delay: 0 }}
                     animate={{ y: 0, scale: 1 }}
                     className="mb-28 md:mb-32 bg text-white rounded-full font-bold text-4xl md:text-8xl text-center self-center items-center flex p-5 md:p-10"
                 >
@@ -42,7 +29,7 @@ function Home() {
 
                 <motion.div
                     initial={{ y: -1000, scale: 0 }}
-                    transition={{ duration: 0.5, delay: 3 }}
+                    transition={{ duration: 0.5, delay: 0 }}
                     animate={{ y: 0, scale: 1 }} className="m-2">
                     <motion.div
                         initial={{ opacity: 1, y: -20 }}
@@ -109,7 +96,7 @@ function Home() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 4, duration: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
                 >
 
                     <ul className="example-2">
