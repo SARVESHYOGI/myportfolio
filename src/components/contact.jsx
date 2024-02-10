@@ -17,10 +17,10 @@ function Contact() {
 
             <motion.div className="flex flex-col content-center mt-6 md:mt-0 justify-center items-center text-white">
                 <motion.div
-                    animate={{ x: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
 
                     transition={{ duration: 1, delay: 0 }}
-                    initial={{ x: 1000 }}
+                    initial={{ x: 700, opacity: 0 }}
                     className=" cursor-pointer flex bg rounded-full w-72 md:w-96 px-8 m-5"
                 >
                     <Link
@@ -36,9 +36,9 @@ function Contact() {
                     </Link>
                 </motion.div>
                 <motion.div
-                    animate={{ x: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    initial={{ x: -1000 }}
+                    initial={{ x: -700, opacity: 0 }}
                     className=" cursor-pointer flex bg px-8 w-72 md:w-96 rounded-full m-5"
                 >
                     <Link
@@ -53,9 +53,9 @@ function Contact() {
                     </Link>
                 </motion.div>
                 <motion.div
-                    animate={{ x: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 0.4 }}
-                    initial={{ x: 1000 }}
+                    initial={{ x: 700, opacity: 0 }}
                     className=" cursor-pointer flex bg px-8 w-72 md:w-96 rounded-full m-5"
                 >
                     <Link
@@ -69,9 +69,9 @@ function Contact() {
                     </Link>
                 </motion.div>
                 <motion.div
-                    animate={{ x: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 0.6 }}
-                    initial={{ x: -1000 }}
+                    initial={{ x: -700, opacity: 0 }}
                     className=" cursor-pointer flex bg px-8 w-72 md:w-96 rounded-full m-5"
                 >
                     <Link
@@ -85,9 +85,9 @@ function Contact() {
                     </Link>
                 </motion.div>
                 <motion.div
-                    animate={{ x: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 0.8 }}
-                    initial={{ x: 1000 }}
+                    initial={{ x: 700, opacity: 0 }}
                     className=" cursor-pointer flex bg px-8 w-72 md:w-96 rounded-full m-5"
                 >
                     <Link
@@ -101,9 +101,9 @@ function Contact() {
                     </Link>
                 </motion.div>
                 <motion.div
-                    animate={{ x: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
-                    initial={{ x: -1000 }}
+                    initial={{ x: -700, opacity: 0 }}
                     className=" cursor-pointer flex bg px-8 w-72 md:w-96 rounded-full m-5"
                 >
                     <Link

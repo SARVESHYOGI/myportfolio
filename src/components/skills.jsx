@@ -25,7 +25,7 @@ function Skills() {
                 <motion.div
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 0.6 }}
-                    initial={{ x: -1000, opacity: 0 }}
+                    initial={{ x: -500, opacity: 0 }}
                     className="my-10 md:my-2 "
                 >
                     <h1 className="text-2xl md:text-6xl mx-auto w-fit mt-2 mb-2">programming Language</h1>
@@ -47,7 +47,7 @@ function Skills() {
                 <motion.div
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0 }}
-                    initial={{ opacity: 0, x: 1000 }}
+                    initial={{ opacity: 0, x: 500 }}
                     className=" my-10 md:my-2 "
                 >
                     <h1 className="text-2xl md:text-6xl mx-auto w-fit mt-2 mb-2"> frontend development</h1>
@@ -79,7 +79,7 @@ function Skills() {
                 <motion.div
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    initial={{ opacity: 0, x: -1000 }}
+                    initial={{ opacity: 0, x: -500 }}
                     className=" my-10 md:my-2 "
                 >
                     <h1 className="text-2xl md:text-6xl mx-auto w-fit mt-2 mb-2">backend development</h1>
@@ -101,7 +101,7 @@ function Skills() {
                 <motion.div
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.9 }}
-                    initial={{ opacity: 0, x: 1000 }}
+                    initial={{ opacity: 0, x: 500 }}
                     className="my-10 md:my-2 "
                 >
                     <h1 className="text-2xl md:text-6xl mx-auto w-fit mt-2 mb-2 ">framework</h1>
