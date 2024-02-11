@@ -23,7 +23,14 @@ function Home() {
                     animate={{ y: 0, scale: 1 }}
                     className="mb-28 md:mb-32 bg text-white rounded-full font-bold text-4xl md:text-8xl text-center self-center items-center flex p-5 md:p-10"
                 >
-                    <span className="hover:animate-rubberBand hover:text-teal-300 hover:scale-y-50 duration-150">HI, <span id="colors" className=""> SARVESH YOGI</span>   HERE</span>
+                    <span className="hover:animate-rubberBand hover:text-teal-300 hover:scale-y-150 duration-150">
+                        HI,
+                        <span id="colors" className="">
+                            SARVESH YOGI
+
+                        </span>
+
+                        HERE</span>
                 </motion.div>
 
 
