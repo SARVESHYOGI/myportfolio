@@ -2,6 +2,7 @@
   max-width: 100wh;
   z-index: -1;
   background: url("https://i.gifer.com/IrM.gif");
+  /* background-color: aqua; */
   /* background: url("https://i.gifer.com/embedded/download/S5Db.gif"); */
   background-repeat: repeat;
   background-attachment: fixed;
