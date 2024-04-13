@@ -1,5 +1,5 @@
 
-# Hi, I'm Sarvesh! 👋
+# Hi, I am Sarvesh! 👋
 
 
 ## 🚀 About Repository
